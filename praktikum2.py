@@ -1,3 +1,5 @@
+#TEsting
+
 import cv2 
 import numpy as np 
 import matplotlib.pyplot as plt 
@@ -43,6 +45,7 @@ ing_flip_vertical = cv2.flip(img, flipCode=0)
 img_flip_both=cv2.flip(img,-1)
 
 plt.figure(figsize=(10,10))
+plt.suplot(221).plt.imshow(cv2.cvtColor(img))
 
 
 cv2.waitKey(0)
