@@ -1,4 +1,4 @@
-# Percobaan 4 : Citra binary
+# Tugas Praktikum 4 : Citra binary
 import cv2
 import numpy as np
 from matplotlib import pyplot as plt 
@@ -11,14 +11,15 @@ Melakukan Thresholding : menggunakan beberapa metode thresholding
 yang berbeda untuk menghasilkan citra biner dari gambar.
 Thresholding -> mengubah citra ke dalam bentuk citra biner
 '''
-ret,thresh1 = cv2.threshold(img,127,255,cv2.THRESH_BINARY)
-ret,thresh2 = cv2.adaptiveThreshold(img,127,255,cv2.ADAPTIVE_THRESH_MEAN_C,cv2.THRESH_BINARY, 11, 2)
+ret,global_thresholding = cv2.threshold(img,127,255,cv2.THRESH_BINARY)
+adaptive_mean_thresholding = cv2.adaptiveThreshold(img,255,cv2.ADAPTIVE_THRESH_MEAN_C,cv2.THRESH_BINARY,11,2)
+adaptive_gaussian_thresholding = cv2.adaptiveThreshold(img,255,cv2.ADAPTIVE_THRESH_GAUSSIAN_C,cv2.THRESH_BINARY,11,2)
 
-titles = ['Original Image','Global Thresholding(v=127)']
-images = [img, thresh1]
+titles = ['Original Image','Global Thresholding(v=127)','mean_thresholding','gaussian_thresholding']
+images = [img, global_thresholding, adaptive_mean_thresholding, adaptive_gaussian_thresholding]
 
-for i in range(2): 
-    plt.subplot(1,2,i+1),plt.imshow(images[i],'gray')
+for i in range(4): 
+    plt.subplot(2,2,i+1),plt.imshow(images[i],'gray')
     plt.title(titles[i])
     plt.xticks([]),plt.yticks([])
 plt.show()

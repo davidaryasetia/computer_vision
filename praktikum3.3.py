@@ -1,5 +1,4 @@
 # Percobaan 3 : Grayscale dengan Iluminasi Citra
-
 import cv2 
 import numpy as np 
 img = cv2.imread("gambar.jpg")
@@ -12,9 +11,10 @@ B,G,R = cv2.split(img)
 '''
 img_gray1 = 0.33 * R + 0.33 * G + 0.33 * B
 img_gray1 = img_gray1.astype(np.uint8)
-img_RG1 = np.minimum(R,G)
 
+img_RG1 = np.minimum(R,G)
 img_gray2 = np.minimum(img_RG1,B)
+
 img_RG2 = np.maximum(R,G)
 img_gray3 = np.maximum(img_RG2,B)
 

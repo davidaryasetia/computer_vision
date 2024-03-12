@@ -1,9 +1,6 @@
 #Percobaan 1 : Layer B/G/R
-
 import cv2
-
 img = cv2.imread("gambar.jpg")
-
 
 # Set ke blue index 1(G)=0 2(R)=0
 b=img.copy()

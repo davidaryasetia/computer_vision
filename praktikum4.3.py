@@ -1,5 +1,4 @@
 #Percobaan 2 : Kuantisasi Level 2,4, dan 8
-
 import cv2
 import numpy as np
 import matplotlib.pyplot as plt
