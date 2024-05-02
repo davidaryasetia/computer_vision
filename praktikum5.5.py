@@ -17,6 +17,8 @@ cv2.waitKey(0)
 cv2.destroyAllWindows()
 
 '''
+
+
 1) Perbedaan Brightness dan Contras 
 Brightnes : 
 - Kecerahan mengacu pada tingkat pencahayaan keseluruhan dari gambar
@@ -38,4 +40,4 @@ Contras :
     - Akibatnya, piksel dengan nilai yang rendah akan menjadi lebih terang dan piksel dengan nilai yang tinggi akan menjadi lebih gelap.
     Dengan kata lain, area yang semula gelap akan menjadi terang dan sebaliknya, sehingga gambar akan memiliki efek negatif.
     Namun, perlu diperhatikan bahwa karena perhitungan dilakukan dalam skala integer, ada kemungkinan beberapa piksel menjadi negatif setelah transformasi, yang tidak mungkin dalam representasi gambar. Oleh karena itu, perlu dilakukan normalisasi atau penanganan khusus untuk menjaga nilai piksel dalam rentang yang valid.
-'''
+'''()
